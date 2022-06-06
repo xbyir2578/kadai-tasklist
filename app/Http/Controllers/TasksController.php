@@ -44,8 +44,9 @@ class TasksController extends Controller
      */
     public function store(Request $request)
     {
+        //バリデーション
         $request->validate([
-            'status' => 'required|max:255',
+            'status' => 'required|max:10',
             'content' => 'required|max:255',
         ]);
         
